@@ -24,8 +24,8 @@ In a typical solo project you'd have 2 files loaded upfront (global + project ro
 
 📔  Before you type anything: `CLAUDE.md, auto memory, MCP tool names, and skill descriptions` all load into context.
 
+* [Exploring the context window](https://code.claude.com/docs/en/context-window) .A bloated `CLAUDE.md` is DEAD WEIGHT ON EVERY SESSION. The general recommendation is to `keep it under 200 lines`. For anything that doesn't apply to every request, you can use Skills or reference files instead — those only get loaded when needed, saving tokens.
+
 Run `/memory` inside your Claude Code session. It shows you which memory files are currently loaded, lets you edit them directly, and reloads the context when you save. Agent Factory
 
 Run run `/context` to see a full breakdown of what's consuming your context window, which will include the `CLAUDE.md` content.
-
-
