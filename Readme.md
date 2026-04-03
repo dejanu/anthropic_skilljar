@@ -15,8 +15,10 @@ When starting in a new codebase run `/init` command. This tells Claude to analyz
 Claude's scopes aka memory layers, Claude reads them at the start of **every session**, [MRO for Claude md files](https://code.claude.com/docs/en/memory#how-claude-md-files-load):
 
     CLAUDE.md or .claude/CLAUDE.md - Generated with /init, committed to source control, in the root of the project, shared with other engineers.
-    CLAUDE.local.md - Not shared with other engineers, contains personal instructions and customizations for Claude.
-    ~/.claude/CLAUDE.md - Used with all projects on your machine, it contains instructions that you want Claude to follow on all projects.
+
+    CLAUDE.local.md - Lives next to your project's CLAUDE.md in the repo root Git-ignored (auto-added to .gitignore), so it never gets committed. Use it for things only relevant to you on that project: your local dev URLs, personal sandbox credentials, preferred test data, debugging shortcuts, or workflow quirks your teammates don't need.
+
+    ~/.claude/CLAUDE.md - (global, personal) Used with all projects on your machine, it contains instructions that you want Claude to follow on all projects. Communication preferences (e.g. "be concise, skip pleasantries")
 
 In a typical solo project you'd have 2 files loaded upfront (global + project root).
 
