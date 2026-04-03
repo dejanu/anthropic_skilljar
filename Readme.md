@@ -7,3 +7,13 @@ Claude code a coding assistant: is essentially a sophisticated **API client** th
 The "magic" is that Claude Code sets up the LLM with the right system **prompts, tools, and workspace context** so Claude can autonomously navigate your codebase, make edits, run tests, and iterate - all while having a conversation with you about what it's doing.
 
 ![Claude Code assistant workflow](resources/02_claude_code_flow.png)
+
+📔 To see all the tool names to which Claude has access, just ask: `List out the names of all the tools you have access to, bullet point list`
+
+When starting in a new codebase run `/init` command. This tells Claude to analyze your entire codebase and understand: the project's purpose and architecture, coding patterns, and structure.
+
+Claude's scopes aka memory layers:
+
+    `CLAUDE.md` - Generated with `/init`, committed to source control, shared with other engineers.
+    `CLAUDE.local.md` - Not shared with other engineers, contains personal instructions and customizations for Claude.
+    `~/.claude/CLAUDE.md` - Used with all projects on your machine, it contains instructions that you want Claude to follow on all projects.
