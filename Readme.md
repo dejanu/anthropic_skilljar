@@ -12,14 +12,20 @@ The "magic" is that Claude Code sets up the LLM with the right system **prompts,
 
 When starting in a new codebase run `/init` command. This tells Claude to analyze your entire codebase and understand: the project's purpose and architecture, coding patterns, and structure.
 
-Claude's scopes aka memory layers, Claude reads them at the start of every session, [MRO for Claude md files](https://code.claude.com/docs/en/memory#how-claude-md-files-load):
+Claude's scopes aka memory layers, Claude reads them at the start of **every session**, [MRO for Claude md files](https://code.claude.com/docs/en/memory#how-claude-md-files-load):
 
     CLAUDE.md or .claude/CLAUDE.md - Generated with /init, committed to source control, in the root of the project, shared with other engineers.
     CLAUDE.local.md - Not shared with other engineers, contains personal instructions and customizations for Claude.
     ~/.claude/CLAUDE.md - Used with all projects on your machine, it contains instructions that you want Claude to follow on all projects.
 
+In a typical solo project you'd have 2 files loaded upfront (global + project root).
+
 ![claude.md files](resources/03_claudemd.png)
 
 📔  Before you type anything: `CLAUDE.md, auto memory, MCP tool names, and skill descriptions` all load into context.
+
+Run `/memory` inside your Claude Code session. It shows you which memory files are currently loaded, lets you edit them directly, and reloads the context when you save. Agent Factory
+
+Run run `/context` to see a full breakdown of what's consuming your context window, which will include the `CLAUDE.md` content.
 
 
