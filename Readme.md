@@ -24,7 +24,21 @@ In a typical solo project you'd have 2 files loaded upfront (global + project ro
 
 ![claude.md files](resources/03_claudemd.png)
 
-📔  Before you type anything: `CLAUDE.md, auto memory, MCP tool names, and skill descriptions` all load into context.
+* A **session** is the conversation/interaction lifetime (it starts when you run claude and ends when you exit) 
+
+* A **context window** represents the memory available within a session (it's a fixed token budget), and it fills up as your session progresses.
+
+📔  Before you type anything: `CLAUDE.md, auto memory, MCP tool names, and skill descriptions` all load into context. The `CLAUDE.md files` and `system prompt` are the static part loaded upfront, everything else acumulates as the session progresses. 
+
+The full context window in a Claude Code session contains:
+
+    System context — git status, current branch, last 5 commits
+    Memory files — all your CLAUDE.md files concatenated
+    Auto memory — learnings Claude has saved across past sessions (MEMORY.md)
+    System prompt — Claude Code's own internal instructions
+    Conversation history — all messages back and forth in the current session
+    File contents — any files Claude has read during the session
+    Tool outputs — results from shell commands, test runs, searches, etc.
 
 * [Exploring the context window](https://code.claude.com/docs/en/context-window) .A bloated `CLAUDE.md` is DEAD WEIGHT ON EVERY SESSION. The general recommendation is to `keep it under 200 lines`. For anything that doesn't apply to every request, you can use Skills or reference files instead — those only get loaded when needed, saving tokens.
 
