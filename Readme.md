@@ -28,6 +28,11 @@ In a typical solo project you'd have 2 files loaded upfront (global + project ro
 
 * A **context window** represents the memory available within a session (it's a fixed token budget), and it fills up as your session progresses.
 
+
+* Agentic loop: the local agent (  a local app that orchestrates the interaction with the model) keeps looping (`build context → model thinks → execute tool → repeat`) until the model stops returning tool calls and returns plain text instead. That's the exit signal.
+
+![agentic loop](resources/00_agentic_loop.png)
+
 📔  Before you type anything: `CLAUDE.md, auto memory, MCP tool names, and skill descriptions` all load into context. The `CLAUDE.md files` and `system prompt` are the static part loaded upfront, everything else acumulates as the session progresses. 
 
 The full context window in a Claude Code session contains:
