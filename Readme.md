@@ -18,6 +18,8 @@ Claude's scopes aka memory layers, Claude reads them at the start of every sessi
     CLAUDE.local.md - Not shared with other engineers, contains personal instructions and customizations for Claude.
     ~/.claude/CLAUDE.md - Used with all projects on your machine, it contains instructions that you want Claude to follow on all projects.
 
+![claude.md files](resources/03_claudemd.png)
+
 📔  Before you type anything: `CLAUDE.md, auto memory, MCP tool names, and skill descriptions` all load into context.
 
 
