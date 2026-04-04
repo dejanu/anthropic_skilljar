@@ -50,3 +50,7 @@ The full context window in a Claude Code session contains:
 Run `/memory` inside your Claude Code session. It shows you which memory files are currently loaded, lets you edit them directly, and reloads the context when you save. Agent Factory
 
 Run run `/context` to see a full breakdown of what's consuming your context window, which will include the `CLAUDE.md` content.
+
+* **MCP** is a open-source standard that follows a client-server architecture, where an MCP host (the app running the agents i.e., Claude Code, VS Code) establishes a connection to one or more MCP Servers.
+
+![MCP architecture](resources/04_mcp.png)
