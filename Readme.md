@@ -54,3 +54,19 @@ Run run `/context` to see a full breakdown of what's consuming your context wind
 * **MCP** is a open-source standard that follows a client-server architecture, where an MCP host (the app running the agents i.e., Claude Code, VS Code) establishes a connection to one or more MCP Servers.
 
 ![MCP architecture](resources/04_mcp.png)
+
+[Built-in commands (slash commands) are shortcuts that trigger specific workflows or prompts in Claude Code.
+
+Most usefull built-in commands, the entire list available [here](https://code.claude.com/docs/en/commands):
+
+```bash
+/plugin	# Manage Claude Code plugins
+/reload-plugins # Reload all active plugins
+
+/init   # Initialize project with a CLAUDE.md
+/memory # Edit CLAUDE.md memory files, enable or disable auto-memory, and view auto-memory entries
+
+/model # swtich between models
+
+/plan [description of task] # enter directly in plan mode : /plan fix the auth bug
+```
