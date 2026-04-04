@@ -55,9 +55,9 @@ Run run `/context` to see a full breakdown of what's consuming your context wind
 
 ![MCP architecture](resources/04_mcp.png)
 
-[Built-in commands (slash commands) are shortcuts that trigger specific workflows or prompts in Claude Code.
+Built-in commands (slash commands) are shortcuts that trigger specific workflows or prompts in Claude Code.
 
-Most usefull built-in commands, the entire list available [here](https://code.claude.com/docs/en/commands):
+Most usefull built-in commands, entire list available [here](https://code.claude.com/docs/en/commands):
 
 ```bash
 /plugin	# Manage Claude Code plugins
@@ -70,3 +70,10 @@ Most usefull built-in commands, the entire list available [here](https://code.cl
 
 /plan [description of task] # enter directly in plan mode : /plan fix the auth bug
 ```
+
+Create you custom commands aka *skills* to trigger specific workflows.
+
+Skills are single-purpose instruction sets great for personal workflows or project-specific automation. Basically, a skill is just a `SKILL.md` file with two parts, that lives in the `.claude/skills` directory of your project:
+
+    - YAML frontmatter (between `---` markers) that tells Claude when to use the skill
+    - Markdown content with instructions that Claude should follow when the skill is invoked.
