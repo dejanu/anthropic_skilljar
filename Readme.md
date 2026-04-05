@@ -113,9 +113,9 @@ LLM can only process text input/output and cannot directly interact with externa
 * Plan MODE vs Thinking KEYWORD primary difference?
 Plan mode handles breadth (multi-step tasks) while thinking handles handles depth (complex single tasks).
 
-Enable plan mode: Claude will outline steps before acting
+Enable plan mode (workflow control): Claude will outline steps before acting
 
-Use thinking : keyword that increase the internal reasoning budged. There's actually a spectrum: 
+Use thinking (internal reasoning): keyword that increase the internal reasoning budged. There's actually a spectrum: 
 ```bash
 "Think".         Basic reasoning
 "Think more"     Extended reasoning
