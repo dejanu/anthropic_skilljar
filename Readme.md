@@ -1,4 +1,12 @@
 
+### Interacting with Claude
+
+What is a good prompt?
+
+* Setting the stage: your role , objective and context
+* Define the task: What actions you want Claude to take; build, analyze, debug, write
+* Specify the rules: style or tone for Claude to use
+
 
 ### [Claude code in action](https://anthropic.skilljar.com/claude-code-in-action)
 
