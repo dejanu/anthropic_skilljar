@@ -9,6 +9,12 @@ What is a good prompt?
 
 ⚠️ The first prompt rarely produces a perfect result. For high-stakes work ask Claude to cite sources (and enable web-search tool)
 
+What is the fundamental limitation of language models that necessitates the use of coding assistants like Claude Code?
+
+```text
+LLM can only process text input/output and cannot directly interact with external systems.
+```
+
 ### [Claude code in action](https://anthropic.skilljar.com/claude-code-in-action)
 
 Claude code a coding assistant: is essentially a sophisticated **API client** that orchestrates the conversation between **you, the LLM, and your codebase**.
@@ -105,10 +111,6 @@ When explaining code, always include:
 
 Keep explanations conversational. For complex concepts, use multiple analogies.
 ```
-
-* What is the fundamental limitation of language models that necessitates the use of coding assistants like Claude Code?
-
-LLM can only process text input/output and cannot directly interact with external systems.
 
 * Plan MODE vs Thinking KEYWORD primary difference?
 Plan mode handles breadth (multi-step tasks) while thinking handles handles depth (complex single tasks).
