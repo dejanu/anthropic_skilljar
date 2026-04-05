@@ -1,12 +1,13 @@
 
-### Interacting with Claude
+### Interacting with Claude Chat
 
 What is a good prompt?
 
-* Setting the stage: your role , objective and context
+* Setting the stage: your role, objective and context.
 * Define the task: What actions you want Claude to take; build, analyze, debug, write
-* Specify the rules: style or tone for Claude to use
+* Specify the rules: style or tone for Claude to use.
 
+⚠️ The first prompt rarely produces a perfect result. For high-stakes work ask Claude to cite sources (and enable web-search tool)
 
 ### [Claude code in action](https://anthropic.skilljar.com/claude-code-in-action)
 
@@ -105,9 +106,20 @@ When explaining code, always include:
 Keep explanations conversational. For complex concepts, use multiple analogies.
 ```
 
-* What is the fundalmental limitation of language models that necessitate the use of coding assistants like Claude Code?
+* What is the fundamental limitation of language models that necessitates the use of coding assistants like Claude Code?
 
 LLM can only process text input/output and cannot directly interact with external systems.
 
-* Plan mode vs thinking mode primary difference?
-Plan mode handles breadth (multi-step tasks) while thinking mode handles depth (complex single tasks). 
+* Plan MODE vs Thinking KEYWORD primary difference?
+Plan mode handles breadth (multi-step tasks) while thinking handles handles depth (complex single tasks).
+
+Enable plan mode: Claude will outline steps before acting
+
+Use thinking : keyword that increase the internal reasoning budged. There's actually a spectrum: 
+```bash
+"Think".         Basic reasoning
+"Think more"     Extended reasoning
+"Think a lot"    Comprehensive reasoning
+"Think longer"   Extended time reasoning
+"Ultrathink"     Maximum reasoning capability
+```
