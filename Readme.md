@@ -96,3 +96,10 @@ When explaining code, always include:
 
 Keep explanations conversational. For complex concepts, use multiple analogies.
 ```
+
+* What is the fundalmental limitation of language models that necessitate the use of coding assistants like Claude Code?
+
+LLM can only process text input/output and cannot directly interact with external systems.
+
+* Plan mode vs thinking mode primary difference?
+Plan mode handles breadth (multi-step tasks) while thinking mode handles depth (complex single tasks). 
