@@ -66,7 +66,7 @@ Run `/memory` inside your Claude Code session. It shows you which memory files a
 
 Run run `/context` to see a full breakdown of what's consuming your context window, which will include the `CLAUDE.md` content.
 
-* **MCP** is a open-source standard that follows a client-server architecture, where an MCP host (the app running the agents i.e., Claude Code, VS Code) establishes a connection to one or more MCP Servers.
+* **MCP** is a open-source standard that follows a client-server architecture, where an MCP host (the app running the agents i.e. Claude Code, VS Code) starts, manages, and owns the client connections to MCP Servers.
 
 ![MCP architecture](resources/04_mcp.png)
 
