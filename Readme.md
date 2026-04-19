@@ -125,3 +125,32 @@ Use thinking (internal reasoning): keyword that increase the internal reasoning
 "Think longer"   Extended time reasoning
 "Ultrathink"     Maximum reasoning capability
 ```
+
+### Introduction to Model Context Protocol
+
+* MCP server with one tool called `greet`: setup without MCP host vs setpup with MCP host (Claude Code, VS Code)
+
+```mermaid
+sequenceDiagram
+    participant Client as my_client.py
+    participant Server as my_server.py (FastMCP)
+
+    Client->>Server: spawn subprocess (stdio)
+    Client->>Server: call_tool("greet", {"name": "Alex"})
+    Server-->>Client: "Hello supp my boi, Alex!"
+    Client->>Server: close connection
+```
+
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant VSCode as VS Code (Copilot)
+    participant Server as my_server.py (FastMCP)
+
+    VSCode->>Server: spawn subprocess via .vscode/mcp.json (stdio)
+    User->>VSCode: ask Copilot to use greet tool
+    VSCode->>Server: call_tool("greet", {"name": "..."})
+    Server-->>VSCode: "Hello supp my boi, ...!"
+    VSCode-->>User: display result
+```
